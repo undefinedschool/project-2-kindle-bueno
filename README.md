@@ -13,7 +13,7 @@ Este es el proyecto 2, para aplicar lo aprendido hasta el momento de POO en JS, 
   - `current`: referencia al libro que estamos leyendo actualmente
 	- `next`: referencia al próximo libro a leer
 	- `last`: referencia al último libro leído
-	- `library`: un _array_ de todos los libros que tenemos
+	- `library`: un _array_ de todos los libros que tenemos (objetos de tipo _EBook_)
   
 - Cada **Ebook** debe tener las siguientes propiedades:
   - `title`
@@ -29,7 +29,8 @@ Este es el proyecto 2, para aplicar lo aprendido hasta el momento de POO en JS, 
     - agrega un nuevo libro a la `library` del _Kindle_
     - actualizar la cantidad de libros no leídos
     - si ya existe un libro en el _Kindle_ con las mismas propiedades, no debe agregarse y debe mostrarse el siguiente error por consola _`"${eBook.title}" already exists in library`_
-	- `.finishCurrentBook()`
+  
+  - `.finishCurrentBook()`
     - Si no tenemos libro actual, no modificar nada y mostrar el siguiente error por consola _'There is no current book to finish, you must add one first.'_
 	  - Marcar el libro actual como leído
 		- Setearle la fecha de lectura (`Date.now()`)
@@ -38,15 +39,27 @@ Este es el proyecto 2, para aplicar lo aprendido hasta el momento de POO en JS, 
 		- Setear como próximo libro (`next`) al primero de los no leídos que no sea el libro actual
     - Actualizar la cantidad de libros leídos
     - Actualizar la cantidad de libros no leídos
+  
   - `.size` **(_getter_)**: retorna la cantidad de libros disponibles en el _Kindle_
+  
   - `.currentEBook` **(_getter_)**: retorna un objeto de la forma `{ title: <TITLE>, genre: <GENRE>, author: <AUTHOR> }` con la info del libro actual
+  
   - `.currentEBook(eBook)` **(_setter_)**: setea cualquier libro disponible en el _Kindle_ como el actual (`current`) y el libro actual (`current`) pasa a ser el próximo (`next`). En el caso de que elijamos el mismo libro que ya estamos leyendo, no hacer nada
+  
   - `.isEqual(eBookA, eBookB)`: método _estático_ de _Kindle_ que compara si 2 _eBooks_ son iguales
+  
   - `.showRead`: retorna un _array_ de los eBooks ya leídos
+  
+  
   - `.showUnread`: retorna un _array_ de los eBooks no leídos aún
+  
   - `.search(keywords)`: retorna un _array_ de los eBooks que incluyan las _keywords_ en `title` o `author`, sin importar si están en mayúscula o minúscula (no es _case sensitive_)
+  
   - `sortBy(criteria)`: retorna un _array_ de los _eBooks_ ordenado por `title` o `author`, según si se recibe el _string_ `'title'` o `'author'` como parámetro
+  
   - `.setCurrent`: reemplaza el libro actual por otro disponible en el _Kindle_
+
+## Observaciones
 
 - Inicializar las _propiedades_ en el constructor de cada clase con los valores apropiados en cada caso
 - Tanto **Kindle** como **EBook** pueden tener otras propiedades y métodos si son necesarios. Pensar por ejemplo qué parte de la interfaz debe ser definida como _pública_ y cuál como _privada_
