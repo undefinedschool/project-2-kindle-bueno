@@ -19,6 +19,7 @@ Este es el proyecto 2, para aplicar lo aprendido hasta el momento de POO en JS, 
   - `title`
   - `genre`
   - `author`
+  - `cover`: _string_ con la _URL_ de la imagen del _cover_ del libro
   - `read`: _booleano_ que indica si fue leído
   - `readDate`: fecha en que se leyó (objeto de tipo `Date()`, por default vacío)
 
@@ -27,6 +28,7 @@ Este es el proyecto 2, para aplicar lo aprendido hasta el momento de POO en JS, 
 - El **Kindle** debe tener los siguientes métodos:
   - `.add(eBook)`
     - agrega un nuevo libro a la `library` del _Kindle_
+    - el método recibe un objeto `eBook` de la forma `{ title: <TITLE>, genre: <GENRE>, author: <AUTHOR>, cover: <COVER> }` y setea las propiedades correspondientes
     - actualizar la cantidad de libros no leídos
     - si ya existe un libro en el _Kindle_ con las mismas propiedades, no debe agregarse y debe mostrarse el siguiente error por consola _`"${eBook.title}" already exists in library`_
   
@@ -42,14 +44,13 @@ Este es el proyecto 2, para aplicar lo aprendido hasta el momento de POO en JS, 
   
   - `.size` **(_getter_)**: retorna la cantidad de libros disponibles en el _Kindle_
   
-  - `.currentEBook` **(_getter_)**: retorna un objeto de la forma `{ title: <TITLE>, genre: <GENRE>, author: <AUTHOR> }` con la info del libro actual
+  - `.currentEBook` **(_getter_)**: retorna un objeto de la forma `{ title: <TITLE>, genre: <GENRE>, author: <AUTHOR>, cover: <COVER> }` con la info del libro actual
   
   - `.currentEBook(eBook)` **(_setter_)**: setea cualquier libro disponible en el _Kindle_ como el actual (`current`) y el libro actual (`current`) pasa a ser el próximo (`next`). En el caso de que elijamos el mismo libro que ya estamos leyendo, no hacer nada
   
   - `.isEqual(eBookA, eBookB)`: método _estático_ de _Kindle_ que compara si 2 _eBooks_ son iguales
   
   - `.showRead`: retorna un _array_ de los eBooks ya leídos
-  
   
   - `.showUnread`: retorna un _array_ de los eBooks no leídos aún
   
@@ -69,3 +70,59 @@ Este es el proyecto 2, para aplicar lo aprendido hasta el momento de POO en JS, 
 1. Si no tenemos libros actualmente en el _Kindle_, el nuevo libro que se agregue pasará a ser el `current` (`next` y `last` no se modifican)
 2. Si tengo exactamente 1 libro en el _Kindle_ (caso anterior), el nuevo libro que se agregue pasará a ser `next` (`last` queda igual)
 3. Si tengo 2 o más libros, el nuevo libro que se agregue pasará a la lista de libros del _Kindle_, `current`, `next` y `last` no se modifican
+
+## eBooks de ejemplo
+
+```js
+{ 
+  title: 'Drive', 
+  genre: 'Psychology', 
+  author: 'Daniel H. Pink', 
+  cover: 'https://i.imgur.com/B3XpOxl.jpg'
+}
+```
+
+```js
+{ 
+  title: 'Futuro Pop', 
+  genre: 'Science Fiction', 
+  author: 'Luciano Banchero', 
+  cover: 'https://i.imgur.com/uYOy55M.jpg'
+}
+```
+
+```js
+{ 
+  title: 'The Lord of the Rings - The Fellowship of the Ring', 
+  genre: 'Fantasy', 
+  author: 'J. R. R. Tolkien', 
+  cover: 'https://i.imgur.com/OwMUnQu.jpg'
+}
+```
+
+```js
+{ 
+  title: 'The Principles Of Object-oriented Javascript', 
+  genre: 'Programming', 
+  author: 'Nicholas C. Zakas', 
+  cover: 'https://i.imgur.com/Iktw1ps.jpg'
+}
+```
+
+```js
+{ 
+  title: 'Harry Potter and the Philosopher's Stone', 
+  genre: 'Fantasy', 
+  author: 'J. K. Rowling', 
+  cover: 'https://i.imgur.com/PH1aXaP.jpg'
+}
+```
+
+```js
+{ 
+  title: 'Eloquent JavaScript', 
+  genre: 'Programming', 
+  author: 'Marijn Haverbeke', 
+  cover: 'https://i.imgur.com/F4NQlvx.jpg'
+}
+```
