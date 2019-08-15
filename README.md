@@ -7,13 +7,13 @@ Este es el proyecto 2, para aplicar lo aprendido hasta el momento de POO en JS, 
 
 ## Propiedades
 
-- El **Kindle** debe tenerlas siguientes propiedades:
+- El **Kindle** debe tener las siguientes propiedades:
   - `readBooks`: número de libros marcados como ya leídos
   - `notReadYetBooks`: número de libros marcados como no leídos aún
   - `current`: referencia al libro que estamos leyendo actualmente
-	- `next`: referencia al próximo libro a leer
-	- `last`: referencia al último libro leído
-	- `library`: un _array_ de todos los libros que tenemos (objetos de tipo _EBook_)
+  - `next`: referencia al próximo libro a leer
+  - `last`: referencia al último libro leído
+  - `library`: un _array_ de todos los libros que tenemos (objetos de tipo _EBook_)
   
 - Cada **Ebook** debe tener las siguientes propiedades:
   - `title`
