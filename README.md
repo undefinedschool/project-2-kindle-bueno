@@ -1,6 +1,6 @@
-# project-two-kindle
+# project-two-kindle-bueno
 
-Este es el proyecto 2, para aplicar lo aprendido hasta el momento de POO en JS, DOM, Git y Metodologías ágiles 
+Este es el proyecto 2, para aplicar lo aprendido hasta el momento de POO en JS, Git y Metodologías ágiles 
 
 1. Crear una clase `Kindle`
 2. Crear una clase `Ebook`
