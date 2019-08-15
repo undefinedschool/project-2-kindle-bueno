@@ -57,8 +57,6 @@ Este es el proyecto 2, para aplicar lo aprendido hasta el momento de POO en JS, 
   - `.search(keywords)`: retorna un _array_ de los eBooks que incluyan las _keywords_ en `title` o `author`, sin importar si están en mayúscula o minúscula (no es _case sensitive_)
   
   - `sortBy(criteria)`: retorna un _array_ de los _eBooks_ ordenado por `title` o `author`, según si se recibe el _string_ `'title'` o `'author'` como parámetro
-  
-  - `.setCurrent`: reemplaza el libro actual por otro disponible en el _Kindle_
 
 ## Observaciones
 
