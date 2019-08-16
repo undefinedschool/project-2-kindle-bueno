@@ -1,4 +1,4 @@
-# project-2-kindle-bueno
+# Project 2: Kindle Bueno
 
 Este es el proyecto 2, para aplicar lo aprendido hasta el momento de POO en JS, Git y Metodologías ágiles 
 
