@@ -2,7 +2,7 @@
 
 Este es el proyecto 2, para aplicar lo aprendido hasta el momento de POO en JS, Git y Metodologías ágiles 
 
-1. Crear una clase `Kindle`
+1. Crear una clase `Kindle`, _que tendrá una única instancia_
 2. Crear una clase `Ebook`
 
 ## Propiedades
