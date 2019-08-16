@@ -1,4 +1,4 @@
-# project-two-kindle-bueno
+# project-2-kindle-bueno
 
 Este es el proyecto 2, para aplicar lo aprendido hasta el momento de POO en JS, Git y Metodologías ágiles 
 
@@ -25,7 +25,10 @@ Este es el proyecto 2, para aplicar lo aprendido hasta el momento de POO en JS, 
 
 ## Métodos
 
-- El **Kindle** debe tener los siguientes métodos:
+- **EBook** debe tener el siguiente método:
+  - `.isEqual(eBookA, eBookB)`: método _estático_ de _EBook_ que compara si 2 _eBooks_ son iguales
+
+- **Kindle** debe tener los siguientes métodos:
   - `.add(eBook)`
     - agrega un nuevo libro a la `library` del _Kindle_
     - el método recibe un objeto `eBook` de la forma `{ title: <TITLE>, genre: <GENRE>, author: <AUTHOR>, cover: <COVER> }` y setea las propiedades correspondientes
@@ -47,9 +50,7 @@ Este es el proyecto 2, para aplicar lo aprendido hasta el momento de POO en JS, 
   - `.currentEBook` **(_getter_)**: retorna un objeto de la forma `{ title: <TITLE>, genre: <GENRE>, author: <AUTHOR>, cover: <COVER> }` con la info del libro actual
   
   - `.currentEBook(eBook)` **(_setter_)**: setea cualquier libro disponible en el _Kindle_ como el actual (`current`) y el libro actual (`current`) pasa a ser el próximo (`next`). En el caso de que elijamos el mismo libro que ya estamos leyendo, no hacer nada
-  
-  - `.isEqual(eBookA, eBookB)`: método _estático_ de _Kindle_ que compara si 2 _eBooks_ son iguales
-  
+    
   - `.showRead`: retorna un _array_ de los eBooks ya leídos
   
   - `.showUnread`: retorna un _array_ de los eBooks no leídos aún
