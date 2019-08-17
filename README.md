@@ -45,8 +45,26 @@ Este es el proyecto 2, para aplicar lo aprendido hasta el momento de POO en JS, 
     - Actualizar la cantidad de libros leídos
     - Actualizar la cantidad de libros no leídos
   
-  - `.library` **(_getter_)**: muestra por consola los _eBooks_ que tenemos en el _kindle_ (no es un `console.log` del _array_ sino de cada _eBook_ por separado)
-  
+  - `.library` **(_getter_)**: retorna un _objeto_ que contiene los libros del kindle (no el _array_ directamente). Ver ejemplo debajo
+
+```js
+// kindle.library (getter)
+{
+  { 
+    title: 'Drive', 
+    genre: 'Psychology', 
+    author: 'Daniel H. Pink', 
+    cover: 'https://i.imgur.com/B3XpOxl.jpg'
+  }, 
+  { 
+    title: 'Futuro Pop', 
+    genre: 'Science Fiction', 
+    author: 'Luciano Banchero', 
+    cover: 'https://i.imgur.com/uYOy55M.jpg'
+  }
+}
+```
+
   - `.size` **(_getter_)**: retorna la cantidad de libros disponibles en el _Kindle_
   
   - `.currentEBook` **(_getter_)**: retorna un objeto de la forma `{ title: <TITLE>, genre: <GENRE>, author: <AUTHOR>, cover: <COVER> }` con la info del libro actual
