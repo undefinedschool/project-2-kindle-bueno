@@ -75,7 +75,7 @@ Este es el proyecto 2, para aplicar lo aprendido hasta el momento de POO en JS, 
   
   - `.search(keywords)`: retorna un _array_ de los eBooks que incluyan las _keywords_ en `title` o `author`, sin importar si están en mayúscula o minúscula (no es _case sensitive_)
   
-  - `sortBy(criteria)`: retorna un _array_ de los _eBooks_ ordenado por `title` o `author`, según si se recibe el _string_ `'title'` o `'author'` como parámetro
+  - `sortBy(criteria)`: retorna un _array_ de los _eBooks_ ordenado (de forma ascendente) por `title` o `author`, según si se recibe el _string_ `'title'` o `'author'` como parámetro
 
 ## Observaciones
 
@@ -128,7 +128,7 @@ Este es el proyecto 2, para aplicar lo aprendido hasta el momento de POO en JS, 
 
 ```js
 { 
-  title: 'Harry Potter and the Philosopher's Stone', 
+  title: "Harry Potter and the Philosopher's Stone", 
   genre: 'Fantasy', 
   author: 'J. K. Rowling', 
   cover: 'https://i.imgur.com/PH1aXaP.jpg'
