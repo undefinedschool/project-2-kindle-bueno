@@ -13,7 +13,7 @@ Este es el proyecto 2, para aplicar lo aprendido hasta el momento de POO en JS, 
   - `current`: referencia al libro que estamos leyendo actualmente
   - `next`: referencia al próximo libro a leer
   - `last`: referencia al último libro leído
-  - `library`: un _array_ de todos los libros que tenemos (objetos de tipo _EBook_)
+  - `_library` **(propiedad privada_)**: un _array_ de todos los libros que tenemos en el objeto _kindle_ (objetos de tipo _EBook_)
   
 - Cada **Ebook** debe tener las siguientes propiedades:
   - `title`
@@ -30,7 +30,7 @@ Este es el proyecto 2, para aplicar lo aprendido hasta el momento de POO en JS, 
 
 - **Kindle** debe tener los siguientes métodos:
   - `.add(eBook)`
-    - agrega un nuevo libro a la `library` del _Kindle_
+    - agrega un nuevo libro a la `_library` del _Kindle_
     - el método recibe un objeto `eBook` de la forma `{ title: <TITLE>, genre: <GENRE>, author: <AUTHOR>, cover: <COVER> }` y setea las propiedades correspondientes
     - actualizar la cantidad de libros no leídos
     - si ya existe un libro en el _Kindle_ con las mismas propiedades, no debe agregarse y debe mostrarse el siguiente error por consola _`"${eBook.title}" already exists in library`_
@@ -44,6 +44,8 @@ Este es el proyecto 2, para aplicar lo aprendido hasta el momento de POO en JS, 
 		- Setear como próximo libro (`next`) al primero de los no leídos que no sea el libro actual
     - Actualizar la cantidad de libros leídos
     - Actualizar la cantidad de libros no leídos
+  
+  - `.library` **(_getter_)**: muestra por consola los _eBooks_ que tenemos en el _kindle_ (no es un `console.log` del _array_ sino de cada _eBook_ por separado)
   
   - `.size` **(_getter_)**: retorna la cantidad de libros disponibles en el _Kindle_
   
