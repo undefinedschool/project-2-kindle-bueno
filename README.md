@@ -10,10 +10,10 @@ Este es el proyecto 2, para aplicar lo aprendido hasta el momento de POO en JS, 
 - El **Kindle** debe tener las siguientes propiedades:
   - `readBooks`: número de libros marcados como ya leídos
   - `notReadYetBooks`: número de libros marcados como no leídos aún
-  - `current`: referencia al libro que estamos leyendo actualmente
-  - `next`: referencia al próximo libro a leer
-  - `last`: referencia al último libro leído
-  - `_library` **(propiedad privada_)**: un _array_ de todos los libros que tenemos en el objeto _kindle_ (objetos de tipo _EBook_)
+  - `_current` **(_propiedad privada_)**: referencia al libro que estamos leyendo actualmente
+  - `_next` **(_propiedad privada_)**: referencia al próximo libro a leer
+  - `_last` **(_propiedad privada_)**: referencia al último libro leído
+  - `_library` **(_propiedad privada_)**: un _array_ de todos los libros que tenemos en el objeto _kindle_ (objetos de tipo _EBook_)
   
 - Cada **Ebook** debe tener las siguientes propiedades:
   - `title`
@@ -39,9 +39,9 @@ Este es el proyecto 2, para aplicar lo aprendido hasta el momento de POO en JS, 
     - Si no tenemos libro actual, no modificar nada y mostrar el siguiente error por consola _'There is no current book to finish, you must add one first.'_
 	  - Marcar el libro actual como leído
 		- Setearle la fecha de lectura (`Date.now()`)
-		- Setear como último libro leído (`last`) el recién finalizado (`current`)
-		- Setear como libro actual (`current`) al próximo a leer (`next`)
-		- Setear como próximo libro (`next`) al primero de los no leídos que no sea el libro actual
+		- Setear como último libro leído (`_last`) el recién finalizado (`_current`)
+		- Setear como libro actual (`_current`) al próximo a leer (`_next`)
+		- Setear como próximo libro (`_next`) al primero de los no leídos que no sea el libro actual
     - Actualizar la cantidad de libros leídos
     - Actualizar la cantidad de libros no leídos
   
@@ -69,7 +69,7 @@ Este es el proyecto 2, para aplicar lo aprendido hasta el momento de POO en JS, 
   
   - `.currentEBook` **(_getter_)**: retorna un objeto de la forma `{ title: <TITLE>, genre: <GENRE>, author: <AUTHOR>, cover: <COVER> }` con la info del libro actual
   
-  - `.currentEBook(eBook)` **(_setter_)**: setea cualquier libro disponible en el _Kindle_ como el actual (`current`) y el libro actual (`current`) pasa a ser el próximo (`next`). En el caso de que elijamos el mismo libro que ya estamos leyendo, no hacer nada
+  - `.currentEBook(eBook)` **(_setter_)**: setea cualquier libro disponible en el _Kindle_ como el actual (`_current`) y el libro actual (`_current`) pasa a ser el próximo (`_next`). En el caso de que elijamos el mismo libro que ya estamos leyendo, no hacer nada
     
   - `.filterBy(criteria)`: retorna un _array_ de los eBooks ya leídos o bo leídos aún, según si se recibe el _string_ `'read'` o `'unread'` como parámetro
   
@@ -84,9 +84,9 @@ Este es el proyecto 2, para aplicar lo aprendido hasta el momento de POO en JS, 
 
 ## Qué pasa cuando agregamos un libro al _Kindle_ (`.add(eBook)`)
 
-1. Si no tenemos libros actualmente en el _Kindle_, el nuevo libro que se agregue pasará a ser el `current` (`next` y `last` no se modifican)
-2. Si tengo exactamente 1 libro en el _Kindle_ (caso anterior), el nuevo libro que se agregue pasará a ser `next` (`last` queda igual)
-3. Si tengo 2 o más libros, el nuevo libro que se agregue pasará a la lista de libros del _Kindle_, `current`, `next` y `last` no se modifican
+1. Si no tenemos libros actualmente en el _Kindle_, el nuevo libro que se agregue pasará a ser el `_current` (`_next` y `_last` no se modifican)
+2. Si tengo exactamente 1 libro en el _Kindle_ (caso anterior), el nuevo libro que se agregue pasará a ser `_next` (`_last` queda igual)
+3. Si tengo 2 o más libros, el nuevo libro que se agregue pasará a la lista de libros del _Kindle_, `_current`, `_next` y `_last` no se modifican
 
 ## eBooks de ejemplo
 
