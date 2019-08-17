@@ -33,7 +33,7 @@ Este es el proyecto 2, para aplicar lo aprendido hasta el momento de POO en JS, 
     - agrega un nuevo libro a la `_library` del _Kindle_
     - el método recibe un objeto `eBook` de la forma `{ title: <TITLE>, genre: <GENRE>, author: <AUTHOR>, cover: <COVER> }` y setea las propiedades correspondientes
     - actualizar la cantidad de libros no leídos
-    - si ya existe un libro en el _Kindle_ con las mismas propiedades, no debe agregarse y debe mostrarse el siguiente error por consola _`"${eBook.title}" already exists in library`_
+    - si ya existe un libro en el _Kindle_ con las mismas propiedades, no debe agregarse y debe mostrarse el siguiente mensaje (warning) por consola _`"${eBook.title}" already exists in library`_
   
   - `.finishCurrentBook()`
     - Si no tenemos libro actual, no modificar nada y mostrar el siguiente error por consola _'There is no current book to finish, you must add one first.'_
