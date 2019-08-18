@@ -5,17 +5,12 @@ class Kindle {
 		this._current = null;
 		this._next = null;
 		this._last = null;
-		this.library = [];
+		this._library = [];
 	}
 	add(eBook) {
-		this._library.push(Ebook);
+		this._library.push(eBook);
 		this.notRead++;
-	}
-	finishCurrentBook() {
-		this.current.read = true;
-		this.current.readDate = Date.now();
-		this.all.shift();
-	}
+	}    
 }
 
 class Ebook {
@@ -30,6 +25,8 @@ class Ebook {
 }
 
 let kindle = new Kindle();
+
+let eBook1 = new Ebook (
 
 /*
 { 
