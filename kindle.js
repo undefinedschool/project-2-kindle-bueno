@@ -13,7 +13,11 @@ class Kindle {
 		} else {
 			this._library.push(eBook);
 			this.notYetReadBooks++;
-		}
+			if(this._current === null){
+				this._current = eBook;
+            		} else if(this._next === null){
+				this._next = eBook;
+			}
 	}
 }
 
