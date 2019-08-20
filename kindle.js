@@ -15,9 +15,10 @@ class Kindle {
 			this.notYetReadBooks++;
 			if(this._current === null){
 				this._current = eBook;
-            		} else if(this._next === null){
+            		} else if(this._next === null) {
 				this._next = eBook;
 			}
+		}
 	}
 }
 
