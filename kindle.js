@@ -13,11 +13,36 @@ class Kindle {
 		} else {
 			this._library.push(eBook);
 			this.notYetReadBooks++;
-			if(this._current === null){
+			if (this._current === null) {
 				this._current = eBook;
-            		} else if(this._next === null) {
+			} else if (this._next === null) {
 				this._next = eBook;
 			}
+		}
+	}
+	// para q set currentEBOOK solo agregue eBooks del kindle, hay q usarla así: kindle.currentEBook = kindle._library[nro] o hay otra manera?
+	set currentEBook(eBook) {
+		if (this._current != eBook) {
+			this._next = this._current;
+			this._current = eBook;
+		}
+	}
+	get currentEBook() {
+		return this._current;
+	}
+	finishCurrentBook() {
+		if (this._current == null) {
+			console.error(
+				"There is no current book to finish, you must add one first."
+			);
+		} else {
+			this._current.read = true;
+			this._current.readDate = Date.now();
+			this._last = this._current;
+			this._current = this._next;
+			this._next = this._library.find(x => !x.read && x!=this._current);
+			this.notYetReadBooks--;
+			this.readBooks++;
 		}
 	}
 }
@@ -83,11 +108,7 @@ kindle.add(
 		"https://i.imgur.com/F4NQlvx.jpg"
 	)
 );
-kindle.add(
-	new Ebook(
-		"Eloquent JavaScript",
-		"Programming",
-		"Marijn Haverbeke",
-		"https://i.imgur.com/F4NQlvx.jpg"
-	)
-);
+
+console.log(kindle);
+kindle.finishCurrentBook();
+console.log(kindle);
