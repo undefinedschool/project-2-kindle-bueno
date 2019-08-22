@@ -32,18 +32,32 @@ class Kindle {
 	}
 	finishCurrentBook() {
 		if (this._current == null) {
-			console.error(
-				"There is no current book to finish, you must add one first."
-			);
+			console.error('There is no current book to finish, you must add one first.');
 		} else {
 			this._current.read = true;
 			this._current.readDate = Date.now();
 			this._last = this._current;
 			this._current = this._next;
-			this._next = this._library.find(x => !x.read && x!=this._current);
+			this._next = this._library.find(x => !x.read && x != this._current);
 			this.notYetReadBooks--;
 			this.readBooks++;
 		}
+	}
+	sortBy(criteria) {
+		if (criteria === 'author') {
+			return this._library.sort((a, b) =>
+				a.author > b.author ? 1 : b.author > a.author ? -1 : 0
+			);
+		} else if (criteria === 'title') {
+			return this._library.sort((a, b) =>
+				a.title > b.title ? 1 : b.title > a.title ? -1 : 0
+			);
+		} else {
+			return "only support 'author' or 'title' criteria";
+		}
+	}
+	get library() {
+		return { ...this._library };
 	}
 }
 
@@ -62,50 +76,50 @@ let kindle = new Kindle();
 
 kindle.add(
 	new Ebook(
-		"Drive",
-		"Psychology",
-		"Daniel H. Pink",
-		"https://i.imgur.com/B3XpOxl.jpg"
+		'Drive',
+		'Psychology',
+		'Daniel H. Pink',
+		'https://i.imgur.com/B3XpOxl.jpg'
 	)
 );
 kindle.add(
 	new Ebook(
-		"Futuro Pop",
-		"Science Fiction",
-		"Luciano Banchero",
-		"https://i.imgur.com/uYOy55M.jpg"
+		'Futuro Pop',
+		'Science Fiction',
+		'Luciano Banchero',
+		'https://i.imgur.com/uYOy55M.jpg'
 	)
 );
 kindle.add(
 	new Ebook(
-		"The Lord of the Rings - The Fellowship of the Ring",
-		"Fantasy",
-		"J. R. R. Tolkien",
-		"https://i.imgur.com/OwMUnQu.jpg"
+		'The Lord of the Rings - The Fellowship of the Ring',
+		'Fantasy',
+		'J. R. R. Tolkien',
+		'https://i.imgur.com/OwMUnQu.jpg'
 	)
 );
 kindle.add(
 	new Ebook(
-		"The Principles Of Object-oriented Javascript",
-		"Programming",
-		"Nicholas C. Zakas",
-		"https://i.imgur.com/Iktw1ps.jpg"
+		'The Principles Of Object-oriented Javascript',
+		'Programming',
+		'Nicholas C. Zakas',
+		'https://i.imgur.com/Iktw1ps.jpg'
 	)
 );
 kindle.add(
 	new Ebook(
 		"Harry Potter and the Philosopher's Stone",
-		"Fantasy",
-		"J. K. Rowling",
-		"https://i.imgur.com/PH1aXaP.jpg"
+		'Fantasy',
+		'J. K. Rowling',
+		'https://i.imgur.com/PH1aXaP.jpg'
 	)
 );
 kindle.add(
 	new Ebook(
-		"Eloquent JavaScript",
-		"Programming",
-		"Marijn Haverbeke",
-		"https://i.imgur.com/F4NQlvx.jpg"
+		'Eloquent JavaScript',
+		'Programming',
+		'Marijn Haverbeke',
+		'https://i.imgur.com/F4NQlvx.jpg'
 	)
 );
 
