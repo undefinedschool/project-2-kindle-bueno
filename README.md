@@ -26,7 +26,7 @@ Este es el proyecto 2, para aplicar lo aprendido hasta el momento de POO en JS, 
 ## Métodos
 
 - **EBook** debe tener el siguiente método:
-  - `.isEqual(eBookA, eBookB)`: método _estático_ de _EBook_ que compara si 2 _eBooks_ son iguales
+  - `.isEqual(eBookA, eBookB)`: método _estático_ de _EBook_ que compara si 2 _eBooks_ son iguales (**Nota:** 2 libros son iguales si tienen el mismo título, género y autor)
 
 - **Kindle** debe tener los siguientes métodos:
   - `.add(eBook)`
