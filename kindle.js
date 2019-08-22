@@ -56,7 +56,7 @@ class Ebook {
 		this.read = false;
 		this.readDate = null;
 	}
-	isEqual(eBookA, eBookB) {
+	static isEqual(eBookA, eBookB) {
 		return (
 			eBookA.title === eBookB.title &&
 			eBookA.genre === eBookB.genre &&
