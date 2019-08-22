@@ -71,7 +71,7 @@ Este es el proyecto 2, para aplicar lo aprendido hasta el momento de POO en JS, 
   
   - `.currentEBook(eBook)` **(_setter_)**: setea cualquier libro disponible en el _Kindle_ como el actual (`_current`) y el libro actual (`_current`) pasa a ser el próximo (`_next`). En el caso de que elijamos el mismo libro que ya estamos leyendo, no hacer nada
     
-  - `.filterBy(criteria)`: retorna un _array_ de los eBooks ya leídos o bo leídos aún, según si se recibe el _string_ `'read'` o `'unread'` como parámetro
+  - `.filterBy(criteria)`: retorna un _array_ de los eBooks ya leídos o no leídos aún, según si se recibe el _string_ `'read'` o `'unread'` como parámetro
   
   - `.search(keywords)`: retorna un _array_ de los eBooks que incluyan las _keywords_ en `title` o `author`, sin importar si están en mayúscula o minúscula (no es _case sensitive_)
   
