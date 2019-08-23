@@ -23,6 +23,8 @@ Este es el proyecto 2, para aplicar lo aprendido hasta el momento de POO en JS, 
   - `read`: _booleano_ que indica si fue leído
   - `readDate`: fecha en que se leyó (objeto de tipo `Date()`, por default vacío)
 
+- **Nota:** el constructor de `EBook` recibe un _objeto_ (no valores sueltos) de la forma `{ title: <TITLE>, genre: <GENRE>, author: <AUTHOR>, cover: <COVER> }` (ver [eBooks de ejemplo](https://github.com/undefinedschool/project-2-kindle-bueno#ebooks-de-ejemplo))
+
 ## Métodos
 
 - **EBook** debe tener el siguiente método:
