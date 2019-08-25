@@ -32,9 +32,7 @@ class Kindle {
 	}
 	finishCurrentBook() {
 		if (this._current == null) {
-			console.error(
-				'There is no current book to finish, you must add one first.'
-			);
+			console.error('There is no current book to finish, you must add one first.');
 		} else {
 			this._current.read = true;
 			this._current.readDate = Date.now();
@@ -44,6 +42,22 @@ class Kindle {
 			this.notYetReadBooks--;
 			this.readBooks++;
 		}
+	}
+	sortBy(criteria) {
+		if (criteria === 'author') {
+			return this._library.sort((a, b) =>
+				a.author > b.author ? 1 : b.author > a.author ? -1 : 0
+			);
+		} else if (criteria === 'title') {
+			return this._library.sort((a, b) =>
+				a.title > b.title ? 1 : b.title > a.title ? -1 : 0
+			);
+		} else {
+			return "only support 'author' or 'title' criteria";
+		}
+	}
+	get library() {
+		return { ...this._library };
 	}
 }
 
