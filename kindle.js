@@ -70,6 +70,13 @@ class Ebook {
 		this.read = false;
 		this.readDate = null;
 	}
+	static isEqual(eBookA, eBookB) {
+		return (
+			eBookA.title === eBookB.title &&
+			eBookA.genre === eBookB.genre &&
+			eBookA.author === eBookB.author
+		);
+	}
 }
 
 let kindle = new Kindle();
