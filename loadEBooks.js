@@ -51,5 +51,3 @@ ebook = new Ebook({
 });
 
 kindle.add(ebook);
-
-console.log(kindle);
