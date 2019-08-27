@@ -32,7 +32,9 @@ class Kindle {
 	}
 	finishCurrentBook() {
 		if (this._current == null) {
-			console.error('There is no current book to finish, you must add one first.');
+			console.error(
+				'There is no current book to finish, you must add one first.'
+			);
 		} else {
 			this._current.read = true;
 			this._current.readDate = Date.now();
@@ -62,11 +64,11 @@ class Kindle {
 }
 
 class Ebook {
-	constructor(title, genre, author, cover) {
-		this.title = title;
-		this.genre = genre;
-		this.author = author;
-		this.cover = cover;
+	constructor(eBook) {
+		this.title = eBook.title;
+		this.genre = eBook.genre;
+		this.author = eBook.author;
+		this.cover = eBook.cover;
 		this.read = false;
 		this.readDate = null;
 	}
@@ -79,57 +81,5 @@ class Ebook {
 	}
 }
 
-let kindle = new Kindle();
+const kindle = new Kindle();
 
-kindle.add(
-	new Ebook(
-		'Drive',
-		'Psychology',
-		'Daniel H. Pink',
-		'https://i.imgur.com/B3XpOxl.jpg'
-	)
-);
-kindle.add(
-	new Ebook(
-		'Futuro Pop',
-		'Science Fiction',
-		'Luciano Banchero',
-		'https://i.imgur.com/uYOy55M.jpg'
-	)
-);
-kindle.add(
-	new Ebook(
-		'The Lord of the Rings - The Fellowship of the Ring',
-		'Fantasy',
-		'J. R. R. Tolkien',
-		'https://i.imgur.com/OwMUnQu.jpg'
-	)
-);
-kindle.add(
-	new Ebook(
-		'The Principles Of Object-oriented Javascript',
-		'Programming',
-		'Nicholas C. Zakas',
-		'https://i.imgur.com/Iktw1ps.jpg'
-	)
-);
-kindle.add(
-	new Ebook(
-		"Harry Potter and the Philosopher's Stone",
-		'Fantasy',
-		'J. K. Rowling',
-		'https://i.imgur.com/PH1aXaP.jpg'
-	)
-);
-kindle.add(
-	new Ebook(
-		'Eloquent JavaScript',
-		'Programming',
-		'Marijn Haverbeke',
-		'https://i.imgur.com/F4NQlvx.jpg'
-	)
-);
-
-console.log(kindle);
-kindle.finishCurrentBook();
-console.log(kindle);
