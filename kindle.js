@@ -46,22 +46,37 @@ class Kindle {
 			this.readBooks++;
 		}
 	}
-
-	get size() {
-		return this._library.length;
+	sortBy(criteria) {
+		if (criteria === 'author') {
+			return this._library.sort((a, b) =>
+				a.author > b.author ? 1 : b.author > a.author ? -1 : 0
+			);
+		} else if (criteria === 'title') {
+			return this._library.sort((a, b) =>
+				a.title > b.title ? 1 : b.title > a.title ? -1 : 0
+			);
+		} else {
+			return "only support 'author' or 'title' criteria";
+		}
 	}
+	get library() {
+		return { ...this._library };
+	}
+  get size() {
+		return this._library.length;
+  }
 }
 
 class Ebook {
-	constructor(title, genre, author, cover) {
-		this.title = title;
-		this.genre = genre;
-		this.author = author;
-		this.cover = cover;
+	constructor(eBook) {
+		this.title = eBook.title;
+		this.genre = eBook.genre;
+		this.author = eBook.author;
+		this.cover = eBook.cover;
 		this.read = false;
 		this.readDate = null;
 	}
-	isEqual(eBookA, eBookB) {
+	static isEqual(eBookA, eBookB) {
 		return (
 			eBookA.title === eBookB.title &&
 			eBookA.genre === eBookB.genre &&
@@ -70,57 +85,5 @@ class Ebook {
 	}
 }
 
-let kindle = new Kindle();
+const kindle = new Kindle();
 
-kindle.add(
-	new Ebook(
-		'Drive',
-		'Psychology',
-		'Daniel H. Pink',
-		'https://i.imgur.com/B3XpOxl.jpg'
-	)
-);
-kindle.add(
-	new Ebook(
-		'Futuro Pop',
-		'Science Fiction',
-		'Luciano Banchero',
-		'https://i.imgur.com/uYOy55M.jpg'
-	)
-);
-kindle.add(
-	new Ebook(
-		'The Lord of the Rings - The Fellowship of the Ring',
-		'Fantasy',
-		'J. R. R. Tolkien',
-		'https://i.imgur.com/OwMUnQu.jpg'
-	)
-);
-kindle.add(
-	new Ebook(
-		'The Principles Of Object-oriented Javascript',
-		'Programming',
-		'Nicholas C. Zakas',
-		'https://i.imgur.com/Iktw1ps.jpg'
-	)
-);
-kindle.add(
-	new Ebook(
-		"Harry Potter and the Philosopher's Stone",
-		'Fantasy',
-		'J. K. Rowling',
-		'https://i.imgur.com/PH1aXaP.jpg'
-	)
-);
-kindle.add(
-	new Ebook(
-		'Eloquent JavaScript',
-		'Programming',
-		'Marijn Haverbeke',
-		'https://i.imgur.com/F4NQlvx.jpg'
-	)
-);
-
-console.log(kindle);
-kindle.finishCurrentBook();
-console.log(kindle);
