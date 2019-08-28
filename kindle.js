@@ -30,6 +30,7 @@ class Kindle {
 	get currentEBook() {
 		return this._current;
 	}
+
 	finishCurrentBook() {
 		if (this._current == null) {
 			console.error(
@@ -44,6 +45,10 @@ class Kindle {
 			this.notYetReadBooks--;
 			this.readBooks++;
 		}
+	}
+
+	get size() {
+		return this._library.length;
 	}
 }
 
