@@ -53,7 +53,7 @@ Este es el proyecto 2, para aplicar lo aprendido hasta el momento de POO en JS, 
   
   - `.currentEBook` **(_getter_)**: retorna un objeto de la forma `{ title: <TITLE>, genre: <GENRE>, author: <AUTHOR>, cover: <COVER> }` con la info del libro actual
   
-  - `.currentEBook(eBook)` **(_setter_)**: setea cualquier libro disponible en el _Kindle_ como el actual (`_current`) y el libro actual (`_current`) pasa a ser el próximo (`_next`). En el caso de que elijamos el mismo libro que ya estamos leyendo, no hacer nada
+  - `.currentEBook(eBook)` **(_setter_)**: setea cualquier libro disponible en el _Kindle_ como el actual (`_current`) y el libro actual (`_current`) pasa a ser el próximo (`_next`). En el caso de que elijamos el mismo libro que ya estamos leyendo, no hacer nada. En el caso de que se intente setear un libro que no se encuentre en el _Kindle_, mostrar el mensaje de error _'The eBook must belong to the library. Add it first'_
     
   - `.filterBy(criteria)`: retorna un _array_ de los _eBooks_ (de la forma `{ title: <TITLE>, genre: <GENRE>, author: <AUTHOR>, cover: <COVER> }`) ya leídos o no leídos aún, según si se recibe el _string_ `'read'` o `'unread'` como parámetro. En el caso de que no haya resultados, se debe mostrar el siguiente mensaje en consola: 'You have no items that match the selected filters'
   
