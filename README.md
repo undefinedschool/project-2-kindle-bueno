@@ -39,11 +39,11 @@ Este es el proyecto 2, para aplicar lo aprendido hasta el momento de POO en JS, 
   
   - `.finishCurrentBook()`
     - Si no tenemos libro actual, no modificar nada y mostrar el siguiente error por consola _'There is no current book to finish, you must add one first.'_
-	  - Marcar el libro actual como leído
-		- Setearle la fecha de lectura (`Date.now()`)
-		- Setear como último libro leído (`_last`) el recién finalizado (`_current`)
-		- Setear como libro actual (`_current`) al próximo a leer (`_next`)
-		- Setear como próximo libro (`_next`) al primero de los no leídos que no sea el libro actual
+    - Marcar el libro actual como leído
+    - Setearle la fecha de lectura (`Date.now()`)
+    - Setear como último libro leído (`_last`) el recién finalizado (`_current`)
+    - Setear como libro actual (`_current`) al próximo a leer (`_next`)
+    - Setear como próximo libro (`_next`) al primero de los no leídos que no sea el libro actual
     - Actualizar la cantidad de libros leídos
     - Actualizar la cantidad de libros no leídos
   
