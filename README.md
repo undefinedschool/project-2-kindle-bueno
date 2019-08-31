@@ -47,7 +47,7 @@ Este es el proyecto 2, para aplicar lo aprendido hasta el momento de POO en JS, 
     - Actualizar la cantidad de libros leídos
     - Actualizar la cantidad de libros no leídos
   
-  - `.library` **(_getter_)**: retorna un _objeto_ que contiene los libros del kindle (no el _array_ directamente), de la forma `{ title: <TITLE>, genre: <GENRE>, author: <AUTHOR>, cover: <COVER> }`
+  - `.library` **(_getter_)**: retorna un array que contiene los libros del kindle, de la forma `{ title: <TITLE>, genre: <GENRE>, author: <AUTHOR>, cover: <COVER> }`
 
   - `.size` **(_getter_)**: retorna la cantidad de libros disponibles en el _Kindle_
   
