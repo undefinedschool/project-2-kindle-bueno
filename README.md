@@ -62,7 +62,7 @@ Este es el proyecto 2, para aplicar lo aprendido hasta el momento de POO en JS, 
   - `.sortBy(criteria)`: retorna un _array_ de los _eBooks_ (de la forma `{ title: <TITLE>, genre: <GENRE>, author: <AUTHOR>, cover: <COVER> }`) ordenado (de forma ascendente) por `title` o `author`, según si se recibe el _string_ `'title'` o `'author'` como parámetro
 
   - **Nuevos métodos de _Kindle_ (29/08):**
-    - `.recentSearches`: muestra las últimas 5 búsquedas realizadas usando `.search`
+    - `.recentSearches`: muestra las últimas 5 búsquedas realizadas usando `.search` (**Nota:** sólo guarda las últimas 5)
     - `.clearHistory`: limpia las búsquedas recientes
     
 ## Observaciones
